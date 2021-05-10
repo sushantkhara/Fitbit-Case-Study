@@ -1,9 +1,3 @@
-![Sedementary vs totalsteps](https://user-images.githubusercontent.com/74862660/117615173-fc350800-b186-11eb-8b85-636ed681b889.png)
-![Lightactivity vs Sedementary](https://user-images.githubusercontent.com/74862660/117615220-0951f700-b187-11eb-8b80-bcb9c343e5cd.png)
-![Caorie vs totalsteps](https://user-images.githubusercontent.com/74862660/117615225-0bb45100-b187-11eb-9e52-fbfa18e268da.png)
-![TotalSteps vs TotalSleep](https://user-images.githubusercontent.com/74862660/117615242-11119b80-b187-11eb-8b32-9c336c54a36a.png)
-![Totaltimeinbed vs Total sleep](https://user-images.githubusercontent.com/74862660/117615248-140c8c00-b187-11eb-98a6-341c85c68383.png)
-![Sleeping nature of participants](https://user-images.githubusercontent.com/74862660/117615254-153db900-b187-11eb-9a07-eb86acd3f521.png)
 # Fitbit-Case-Study
 This Repo is about the case study on Fitbit fitness tracker
 #============================
@@ -182,24 +176,32 @@ ggplot(data=daily_activity, aes(x=TotalSteps, y=SedentaryMinutes,
 
 # Graph tells that participants who walk more everyday, spent less time in sitting
 ```
+![Sedementary vs totalsteps](https://user-images.githubusercontent.com/74862660/117615173-fc350800-b186-11eb-8b85-636ed681b889.png)
+
 ```{r Relationship between LightlyActiveMinutes and SedentaryMinutes}
 ggplot(data = daily_activity, mapping = aes(x = LightlyActiveMinutes, y = SedentaryMinutes, color = Activity_dayofweek))+
   geom_smooth(se=FALSE, method = 'loess', formula = y~x) + 
   labs(title = "LightlyActiveMinutes Vs SedentaryMinutes", subtitle = "Everyday")
 #Participants who spend most time in light activities they spend less time in sitting everyday of the week.
 ```
+![Lightactivity vs Sedementary](https://user-images.githubusercontent.com/74862660/117615220-0951f700-b187-11eb-8b80-bcb9c343e5cd.png)
+
 ```{r Relationship between TotalSteps and Calories View(combined_data)}
 ggplot(data = combined_data, mapping = aes(x = TotalSteps, y = Calories, color = Activity_dayofweek))+ 
   geom_smooth(se=FALSE, method = 'loess', formula = y~x) + 
   labs(title = "Calories vs TotalSteps", subtitle = "Everyday")
 # Participants who takes more calories they tend to walk more steps everyday of the week
 ```
+![Caorie vs totalsteps](https://user-images.githubusercontent.com/74862660/117615225-0bb45100-b187-11eb-9e52-fbfa18e268da.png)
+
 ```{r Relationship between minutes asleep and time in bed}
 ggplot(data=sleep_day, aes(x=TotalMinutesAsleep, y=TotalTimeInBed, color = Sleep_dayofweek)) + 
    geom_smooth( se= FALSE, method = 'loess', formula = y~x) +
   labs(title = "TotalTimeinBed Vs TotalMinutesAsleep", subtitle = "Everyday")
 # This indicates that the participants who spent more time on Bed they also sleep more
 ```
+![TotalSteps vs TotalSleep](https://user-images.githubusercontent.com/74862660/117615242-11119b80-b187-11eb-8b32-9c336c54a36a.png)
+
 ```{r Relationship between Totalsteps and TotalMinutesAsleep per day}
 combined_data%>%
   ggplot(aes(x=TotalSteps, y=TotalMinutesAsleep, color = Sleep_dayofweek)) + 
@@ -208,8 +210,9 @@ combined_data%>%
 # The graph shows that the participants who sleep more on Sunday, Tuesday, Thursday and Friday,
 # TotalSteps gradually increases. But on Monday and Saturday the TotalSleep time is less,and Totalsteps walked by the participants is more
 ```
+![Totaltimeinbed vs Total sleep](https://user-images.githubusercontent.com/74862660/117615248-140c8c00-b187-11eb-98a6-341c85c68383.png)
 
-```{r Discovering Sleeping habits of Participants}
+```{r Discovering Sleeping patterns of Participants}
 # Get summary of 'sleep_day' data and place in variable 'summary_sleep'.
 #Summarize 'mean_sleep', 'TotalMinutesAsleepPerNight', 'mean_total_time_in_bed',
 #'sleep_date', and 'Sleep_dayofweek'
@@ -239,7 +242,7 @@ summary_sleep %>% #summarizing observations per day of week
 # This graph shows how many participants Sleep each day of the week
 ```
 
-```{r Categorizing Sleeping nature of the participants}
+```{r Categorizing Sleeping patterns of the participants}
 summary_sleep %>%
   ggplot(aes(x=Sleep_dayofweek, fill = Sleep_dayofweek)) +
   geom_() +
@@ -248,3 +251,4 @@ summary_sleep %>%
 # at least 10 participants sleep more than 7.6hrs per day(mean sleep), At least 30 or more participants sleep well
 # Maximum 8 participants are sleeping badly(Sleeping hours maximum 3.2hrs)
 ```
+![Sleeping nature of participants](https://user-images.githubusercontent.com/74862660/117615254-153db900-b187-11eb-9a07-eb86acd3f521.png)
