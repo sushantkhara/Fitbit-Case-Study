@@ -1,3 +1,9 @@
+![Sedementary vs totalsteps](https://user-images.githubusercontent.com/74862660/117615173-fc350800-b186-11eb-8b85-636ed681b889.png)
+![Lightactivity vs Sedementary](https://user-images.githubusercontent.com/74862660/117615220-0951f700-b187-11eb-8b80-bcb9c343e5cd.png)
+![Caorie vs totalsteps](https://user-images.githubusercontent.com/74862660/117615225-0bb45100-b187-11eb-9e52-fbfa18e268da.png)
+![TotalSteps vs TotalSleep](https://user-images.githubusercontent.com/74862660/117615242-11119b80-b187-11eb-8b32-9c336c54a36a.png)
+![Totaltimeinbed vs Total sleep](https://user-images.githubusercontent.com/74862660/117615248-140c8c00-b187-11eb-98a6-341c85c68383.png)
+![Sleeping nature of participants](https://user-images.githubusercontent.com/74862660/117615254-153db900-b187-11eb-9a07-eb86acd3f521.png)
 # Fitbit-Case-Study
 This Repo is about the case study on Fitbit fitness tracker
 #============================
