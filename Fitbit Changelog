@@ -1,0 +1,22 @@
+## Fitbit Data Analysis Changelog
+
+# Version 1.0.0
+
+# Changes 
+  - sleep_day and daily_activity combine dinto single data frame combined_data
+ 
+
+# New 1.0
+  - Activity_dayofweek new column added in daily_activity
+  - calorie_dayofweek new column added in daily_calories
+  - Steps_dayofWeek new column added in daily_steps
+  - Sleep_dayofWeek new column added in sleep_day
+  - Dayofweek new column added in heartrate_secs
+
+# Fixes 1.0
+    - Datatype of ActivityDate of daily_activity changed from char to date
+    - Datatype of ActivityDay of daily_calories changed from char to date
+    - Datatype of ActivityDay of daily_steps changed from char to date
+    - Datatype of SleepDay of sleep_day changed from char to date
+    - Datatype of Time of heartrate_secs changed from char to date
+    - Datatype of Date of weight_info changed from char to date
