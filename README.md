@@ -235,12 +235,15 @@ summary_sleep$overall_mean_level_of_sleep =
 
 summary_sleep %>% #summarizing observations per day of week
   group_by(Sleep_dayofweek) %>% 
-  summarise(Count = n())%>%   # Number of observations ranged from 47-66 each day.
-  ggplot() +
-  geom_col(aes(reorder(Sleep_dayofweek, Count), Count, fill = Sleep_dayofweek)) +
+  summarise(obs = n()) # Number of observations ranged from 47-66 each day
+
+summary_sleep %>%  
+  ggplot(aes(x = Sleep_dayofweek, fill = Sleep_dayofweek )) +
+  geom_bar() +
   labs(title = "No. of Participants Sleep each day")
 # This graph shows how many participants Sleep each day of the week
 ```
+![Total no  of participants sleep everyday](https://user-images.githubusercontent.com/74862660/117618245-47511a00-b18b-11eb-84b8-f039a7249e0b.png)
 
 ```{r Categorizing Sleeping patterns of the participants}
 summary_sleep %>%
