@@ -168,16 +168,6 @@ weight_info %>%
 #=========================
 # Step 4: VISUALIZING DATA
 #=========================
-```{r Discovering relationship between steps taken in day and SedentaryMinutes}
-ggplot(data=daily_activity, aes(x=TotalSteps, y=SedentaryMinutes, 
-                                color = Activity_dayofweek)) +
- geom_smooth(se = FALSE, method = 'loess', formula = y~x) + 
-  labs(title = "SedentaryMinutes Vs TotalSteps", subtitle = "Everyday")
-
-# Graph tells that participants who walk more everyday, spent less time in sitting
-```
-![Sedementary vs totalsteps](https://user-images.githubusercontent.com/74862660/117615173-fc350800-b186-11eb-8b85-636ed681b889.png)
-
 ```{r Relationship between LightlyActiveMinutes and SedentaryMinutes}
 ggplot(data = daily_activity, mapping = aes(x = LightlyActiveMinutes, y = SedentaryMinutes, color = Activity_dayofweek))+
   geom_smooth(se=FALSE, method = 'loess', formula = y~x) + 
@@ -255,3 +245,13 @@ summary_sleep %>%
 # Maximum 8 participants are sleeping badly(Sleeping hours maximum 3.2hrs)
 ```
 ![Sleeping nature of participants](https://user-images.githubusercontent.com/74862660/117615254-153db900-b187-11eb-9a07-eb86acd3f521.png)
+
+```{r Discovering relationship between steps taken in day and SedentaryMinutes}
+ggplot(data=daily_activity, aes(x=TotalSteps, y=SedentaryMinutes, 
+                                color = Activity_dayofweek)) +
+ geom_smooth(se = FALSE, method = 'loess', formula = y~x) + 
+  labs(title = "SedentaryMinutes Vs TotalSteps", subtitle = "Everyday")
+
+# Graph tells that participants who walk more everyday, spent less time in sitting
+```
+![Sedementary vs totalsteps](https://user-images.githubusercontent.com/74862660/117615173-fc350800-b186-11eb-8b85-636ed681b889.png)
