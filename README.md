@@ -63,7 +63,7 @@ str(weight_info)
 ```
 
 ## Noticed that Id is common column name for all data sets, this can be used to merge datasets
-## Datatype of ActivityDate, ActivityDay, SleepDay, Time, Date are Char type which is wrong type changing into 
+## Datatype of ActivityDate, ActivityDay, SleepDay, Time, Date are Char type which is wrong type changing into proper data types
 ```{r correct Date and time formats}
 # change ActivityDate variable to date format from char format
 daily_activity$ActivityDate<- as.Date(daily_activity$ActivityDate, "%m/%d/%Y")
